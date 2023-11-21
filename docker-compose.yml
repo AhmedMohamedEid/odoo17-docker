@@ -12,7 +12,7 @@ services:
         - ./postgresql:/var/lib/postgresql/data
 
   odoo17:
-    image: 0887436/odoo17-latest
+    image: odoo:17
     user: root
     depends_on:
       - db
