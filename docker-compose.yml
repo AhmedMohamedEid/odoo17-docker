@@ -1,11 +1,10 @@
-version: '3.1'
 services:
   db:
     image: postgres:15
     user: root
     environment:
       - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo17@2023
+      - POSTGRES_PASSWORD=odoo
       - POSTGRES_DB=postgres
     restart: always             # run as a service
     volumes:
@@ -24,7 +23,7 @@ services:
     environment:
       - HOST=db
       - USER=odoo
-      - PASSWORD=odoo17@2023
+      - PASSWORD=odoo
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
